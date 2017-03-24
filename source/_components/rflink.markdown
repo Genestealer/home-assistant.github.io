@@ -71,7 +71,7 @@ Other methods of exposing the serial interface over TCP are possible (eg: ESP826
 Tested with Wifi serial bridge [esp-link V2.2.3](https://github.com/jeelabs/esp-link/releases/tag/v2.2.3) running on a NodeMCU (ESP8266 Wifi module) with ESP8266 TXD0 (pin D10) and RXD0 (pin D9) connected to Arduino MEGA 2560 RX (Pin 2) and TX (Pin 3) respectively. 
 
 <p class='note warning'>
-Due to different logic levels, a voltage level shifter is required between the 3.3V NodeMCU and 5V Arduino MEGA 2560 pins. The BSS138 bidirectional logic level converter has been tested for serial pins and the [link](https://www.aliexpress.com/item/8CH-IIC-I2C-Logic-Level-Converter-Bi-Directional-Module-DC-DC-5V-to-3-3V-Setp/32238089139.html) is recommended for the CC2500 transceiver (used for Ikea Ansluta and Living Colors)
+Due to different logic levels, a voltage level shifter is required between the 3.3V NodeMCU and 5V Arduino MEGA 2560 pins. The BSS138 bidirectional logic level converter has been tested for serial data pins. Additionally a [resistor based level converter](https://www.aliexpress.com/item/8CH-IIC-I2C-Logic-Level-Converter-Bi-Directional-Module-DC-DC-5V-to-3-3V-Setp/32238089139.html) has been tested and is recommended when using the CC2500 transceiver (used for Ikea Ansluta and Living Colors).
 </p>
 
 <p class='note'>
