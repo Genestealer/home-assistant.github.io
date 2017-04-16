@@ -45,8 +45,8 @@ To use this integration you should define a conversation (intent) in Api.ai, con
 - Enable Webhook and set your HA url with the apiai endpoint. Eg.: ``https://myhome.duckdns.org/api/apiai?api_password=HA_PASSWORD``
 - Click "Save"
 - Create a new intent
-- Below "User says" write one phrase that you, the user, will tell Api.ai. Eg.: Which is the temperature at home?
-- In "Action" set some key (this will be the bind with HA config), eg.: GetTemperature
+- Below "User says" write one phrase that you, the user, will tell Api.ai. E.G. What is the temperature at home?
+- In "Action" set a key (this will be the bind with HA config), eg.: GetTemperature
 - In "Response" set "Cannot connect to HA or it is taking to long" (fall back response)
 - At the end of the page, click on "Fulfillment" and check "Use webhook"
 - Click "Save"
