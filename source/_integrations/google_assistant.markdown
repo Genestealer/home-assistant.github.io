@@ -32,21 +32,20 @@ You will need to create a service account [Create Service account key](https://c
 
 1. Create a new project in the [Actions on Google console](https://console.actions.google.com/).
     1. Add/Import a project and give it a name.
-    2. Click on the `Smart Home` card, select the `Smart home` recommendation.
-    3. Click `Build your Action`, select `Add Action(s)`. Add your Home Assistant URL: `https://[YOUR HOME ASSISTANT URL:PORT]/api/google_assistant` in the `Fulfillment URL` box, replace the `[YOUR HOME ASSISTANT URL:PORT]` with the domain / IP address and the port under which your Home Assistant is reachable.
-    4. Click `Save`. Then click on `Overview`, which will lead you back to the app details screen.
-2. `Account linking` is required for your app to interact with Home Assistant. Set this up under the `Quick Setup` section.
-    1. Leave it at the default `No, I only want to allow account creation on my website` and select `Next`.
-    2. For the `Linking type` select `OAuth` and `Authorization Code`. Click `Next`
-    3. Client ID: `https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID`.
-    4. Client Secret: Anything you like, Home Assistant doesn't need this field.
-    5. Authorization URL (replace with your actual URL): `https://[YOUR HOME ASSISTANT URL:PORT]/auth/authorize`.
-    6. Token URL (replace with your actual URL): `https://[YOUR HOME ASSISTANT URL:PORT]/auth/token`. Click `Next`
-    7. Configure your client: Type `email` and click `Add scope`, then type `name` and click `Add scope` again.
-    8. Do **NOT** check `Google to transmit clientID and secret via HTTP basic auth header`. Click `Next`
-    9. Testing instructions: Enter anything. It doesn't matter since you won't submit this app. Click `Save`
+    2. Click on the `Smart Home` card then click on the Start Building button.
+    3. Click `Build your Action`, click `Add Action(s)`. On the page that loads add you your Home Assistant URL: `https://[YOUR HOME ASSISTANT URL:PORT]/api/google_assistant` in the `Fulfillment URL` box, replace the `[YOUR HOME ASSISTANT URL:PORT]` with the domain / IP address and the port under which your Home Assistant is reachable.
+    4. Click `Save`. Then click on `Overview`, which will lead you back to the app details page.
+2. `Account linking` is required for your app to interact with Home Assistant. Set this up under the `Quick Setup` section (Located on the project `Overview` page).
+    1. Enter the following:
+            1. Client ID: `https://oauth-redirect.googleusercontent.com/r/YOUR_PROJECT_ID`, replace the `YOUR_PROJECT_ID` your current project id, found in the URL of the open page loaded (E.G. https://console.actions.google.com/u/1/project/THIS_IS_YOUR_PROJECT_ID)
+            2. Client Secret: Anything you like, Home Assistant doesn't need this field.
+            3. Authorization URL (replace with your actual URL): `https://[YOUR HOME ASSISTANT URL:PORT]/auth/authorize`.
+            4. Token URL (replace with your actual URL): `https://[YOUR HOME ASSISTANT URL:PORT]/auth/token`.
+            5. Click `Next`, then `Next` again.
+    2. Under `Configure your client` in the text boxt type `email` and click `Add scope`, then type `name` and click `Add scope` again.
+    3. Do **NOT** check `Google to transmit clientID and secret via HTTP basic auth header`.
+    4. Click `Save`
 
-    <img src='/images/integrations/google_assistant/accountlinking.png' alt='Screenshot: Account linking'>
 
 3. Select the `Develop` tab at the top of the page, then in the upper right hand corner select the `Test` button to generate the draft version Test App.
 4. Add the `google_assistant` integration configuration to your `configuration.yaml` file and restart Home Assistant following the [configuration guide](#configuration) below.
